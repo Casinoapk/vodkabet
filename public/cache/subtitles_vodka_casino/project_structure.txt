@@ -1,0 +1,17 @@
+﻿
+FullName                                                                         
+--------                                                                         
+vodka-casino.ru\subtitles_vodka_casino\ar.vtt               
+vodka-casino.ru\subtitles_vodka_casino\de.vtt               
+vodka-casino.ru\subtitles_vodka_casino\en.vtt               
+vodka-casino.ru\subtitles_vodka_casino\es.vtt               
+vodka-casino.ru\subtitles_vodka_casino\fr.vtt               
+vodka-casino.ru\subtitles_vodka_casino\hi.vtt               
+vodka-casino.ru\subtitles_vodka_casino\kr.vtt               
+vodka-casino.ru\subtitles_vodka_casino\pt.vtt               
+vodka-casino.ru\subtitles_vodka_casino\ru.vtt               
+vodka-casino.ru\subtitles_vodka_casino\tr.vtt               
+vodka-casino.ru\subtitles_vodka_casino\uk.vtt               
+vodka-casino.ru\subtitles_vodka_casino\zh-CN.vtt            
+
+
