@@ -1,74 +1,203 @@
 <!doctype html>
-<html lang="ru">
+<html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Megaways Jackpots — Slots</title>
-<meta name="description" content="Megaways Jackpots — информационная страница слота: особенности, бонусы, линии выплат, провайдер, демо-режим (заглушка).">
-<link rel="canonical" href="/slots/megaways-jackpots.html">
-<meta name="robots" content="noindex, nofollow">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Online Slots Vodka Casino</title>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+<script src="jquery.jSlots.js"></script>
 <style>
-  :root { --bg:#0b0d10; --card:#12161b; --text:#e7edf3; --muted:#9fb0bf; --accent:#4da3ff; }
-  * { box-sizing: border-box; }
-  body { margin:0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Helvetica Neue", sans-serif; background: linear-gradient(180deg, #0b0d10, #0f1318); color: var(--text); }
-  .wrap { max-width: 960px; margin: 0 auto; padding: 32px 20px 64px; }
-  header { display:flex; align-items:center; gap:16px; margin-bottom:24px; }
-  .crumbs a { color: var(--muted); text-decoration:none; }
-  .crumbs a:hover { color: var(--text); }
-  h1 { font-size: clamp(28px, 4vw, 40px); margin: 8px 0 4px; }
-  .meta { color: var(--muted); font-size: 14px; }
-  .card { background: var(--card); border-radius: 16px; padding: 20px; box-shadow: 0 8px 24px rgba(0,0,0,.35); }
-  .grid { display:grid; grid-template-columns: 1fr; gap:16px; }
-  @media (min-width: 900px) { .grid { grid-template-columns: 1.2fr .8fr; } }
-  .badge { display:inline-block; border:1px solid rgba(255,255,255,.12); border-radius:999px; padding:6px 10px; font-size:12px; color:var(--muted); }
-  .list li { margin: 6px 0; }
-  footer { margin-top:32px; color: var(--muted); font-size:12px; }
-</style>
-<script type="application/ld+json">
-{
-  "@context":"https://schema.org",
-  "@type":"WebPage",
-  "name":"Megaways Jackpots — Slots",
-  "description":"Megaways Jackpots — информационная страница слота: особенности, бонусы, линии выплат, провайдер, демо-режим (заглушка).",
-  "dateModified":"2025-08-17T22:01:36Z",
-  "breadcrumb":{"@type":"BreadcrumbList","itemListElement":[
-    {"@type":"ListItem","position":1,"name":"Главная","item":"/"},
-    {"@type":"ListItem","position":2,"name":"Слоты","item":"/slots/"}
-  ]}
+body{ 
+  font-family: sans-serif; 
+  color: #fff; 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center; 
+  overflow: hidden; 
+  justify-content: center; 
+  min-height: 100vh;
+  background: linear-gradient(180deg, #0b0d10, #0f1318);
+} 
+.slot-machine{ 
+  display: flex; 
+  gap: 10px; 
+  margin-bottom: 20px; 
+  justify-content: center;
+} 
+.jSlots-wrapper{ 
+  overflow: hidden; 
+  height: 100px; 
+  width: 100px; 
+  border: 2px solid #00ff00; 
+  background: #222;
+} 
+.slot{ 
+  padding: 0; 
+  margin: 0; 
+  list-style: none;
+} 
+.slot li{ 
+  width: 100px; 
+  height: 100px; 
+  line-height: 100px; 
+  text-align: center; 
+  font-size: 60px; 
+  font-weight: bold; 
+  color: #00ff00;
+} 
+.button-container{ 
+  display: flex; 
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
 }
-</script>
+.list{ 
+  display: flex; 
+  flex-direction: column; 
+  align-items: center;
+}
+.button-wrapper{ 
+  margin-top: 20px; 
+  display: flex; 
+  justify-content: center; 
+  width: 100%;
+}
+#playBtn{ 
+  padding: 10px 25px; 
+  font-size: 18px; 
+  border-radius: 8px; 
+  border: none; 
+  background: #00ff08; 
+  color: #000; 
+  cursor: pointer; 
+  transition: background 0.3s; 
+  max-width: 120px; 
+  width: 100%; 
+  box-sizing: border-box;
+}
+#playBtn:hover{ 
+  background: #45a049;
+} 
+#returnBtn{ 
+  position: absolute; 
+  top: 20px; 
+  left: 20px; 
+  padding: 8px 18px; 
+  font-size: 16px; 
+  border-radius: 6px; 
+  border: none; 
+  background: #00ff08; 
+  color: #000; 
+  cursor: pointer; 
+  transition: background 0.3s; 
+  z-index: 10;
+} 
+#returnBtn:hover{ 
+  background: #45a049;
+} 
+</style>
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <div class="crumbs"><a href="/">Главная</a> / <a href="/slots/">Слоты</a> /</div>
-    </header>
-
-    <h1>Megaways Jackpots</h1>
-    <div class="meta">Страница-заглушка для внутренней перелинковки и технической оптимизации.</div>
-
-    <div class="grid">
-      <section class="card">
-        <p><span class="badge">Шаблон</span></p>
-        <p>Это автоматически сгенерированная HTML‑страница по пути <code>/slots/megaways-jackpots.html</code>. Используйте её как основу для будущего контента: краткое описание, характеристики (RTP, волатильность, линии), провайдер, бонусные функции, скриншоты.</p>
-        <ul class="list">
-          <li><strong>RTP:</strong> —</li>
-          <li><strong>Линии выплат:</strong> —</li>
-          <li><strong>Волатильность:</strong> —</li>
-          <li><strong>Провайдер:</strong> —</li>
-        </ul>
-        <p>Добавьте уникальный текст (300–500+ слов), таблицы, FAQ и внутренние ссылки, чтобы страница имела ценность для поиска.</p>
-      </section>
-      <aside class="card">
-        <h3>Навигация</h3>
-        <ul class="list">
-          <li><a href="/slots/">Все слоты</a></li>
-          <li><a href="/">Главная</a></li>
-        </ul>
-      </aside>
-    </div>
-
-    <footer>Generated 2025-08-17T22:01:36Z • Canonical: /slots/megaways-jackpots.html</footer>
-  </div>
+<a href="https://vodka-casino.ru"><button id="returnBtn">Return to Website</button></a>
+<div class="list">
+<div class="slot-machine">
+<div class="jSlots-wrapper">
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+</div>
+<div class="jSlots-wrapper">
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+</div>
+<div class="jSlots-wrapper">
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+<ul class="slot" style="position: relative;">
+<li>7</li><li>6</li><li>5</li><li>4</li><li>3</li><li>2</li><li>1</li><li>7</li>
+</ul>
+</div>
+</div>
+<input type="button" id="playBtn" value="Play">
+<script>
+$(function (){
+  $('.slot').jSlots({
+    number: 7,
+    spinner: '#playBtn',
+    time: 2000,
+    loops: 6,
+    easing: 'easeOutQuart',
+    onStart: function (){
+      console.log('Spin started!');
+    },
+    onEnd: function (n){
+      console.log('Stopped at: ' + n);
+    }
+  });
+}); 
+</script>
+<script>
+window.addEventListener("DOMContentLoaded", function (){
+  if (window !== window.top){
+    const btn = document.getElementById('returnBtn');
+    if (btn) btn.style.display = 'none';
+  }
+}); 
+</script>
+</div>
 </body>
 </html>
