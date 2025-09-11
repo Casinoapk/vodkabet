@@ -157,7 +157,6 @@
             color: #fff;
         }
 
-        /* Таблица стили */
         .table-container {
             overflow-x: auto;
             margin: 2rem 0;
@@ -186,8 +185,6 @@
         tr:hover {
             background: rgba(255, 255, 255, 0.1);
         }
-
-        /* Карусель стили */
         .carousel-container {
             position: relative;
             max-width: 800px;
@@ -249,8 +246,6 @@
         .indicator.active {
             background: var(--secondary-color);
         }
-
-        /* YouTube видео (lite embed) */
         .video-container { position: relative; width: 100%; height: 0; padding-bottom: 56.25%; margin: 2rem 0; }
         .yt-lite, .video-container iframe { position: absolute; top:0; left:0; width:100%; height:100%; border-radius:8px; overflow:hidden; }
         .yt-lite { background:#000; cursor: pointer; display:block; }
@@ -340,7 +335,6 @@
         }
     </style>
     <style>
-        /* Contrast fixes */
         .carousel-btn { background-color:#1f4fbf; color:#ffffff; border:1px solid #0e2f73; }
         .carousel-btn:hover { background-color:#0e2f73; color:#ffffff; }
         th { background-color:#0e2f73 !important; color:#ffffff !important; }
@@ -463,9 +457,6 @@
                 </div>
             </div>
         </section>
-        
-
-        <!-- Таблица с информацией -->
         <section class="section animate__animated animate__fadeInUp">
             <h2>Информация о казино</h2>
             <div class="table-container">
@@ -512,8 +503,6 @@
                 </table>
             </div>
         </section>
-
-        <!-- Официальные ссылки -->
         <section class="section animate__animated animate__fadeInUp">
             <h2>Официальные ссылки</h2>
             <div class="links-grid">
@@ -663,8 +652,6 @@
                 </div>
             </div>
         </section>
-
-        <!-- Инструкции -->
         <section class="section animate__animated animate__fadeInUp">
             <h2>Инструкции по депозиту и выводу</h2>
             <div class="instructions">
@@ -680,8 +667,6 @@
                 <p>Минимальная сумма для вывода наличными — 500 000₽-10000000₽. Свяжитесь с менеджером через Telegram для уточнения деталей.</p>
             </div>
         </section>
-
-        <!-- Хештеги -->
         <section class="section animate__animated animate__fadeInUp">
             <h2>Хештеги</h2>
             <div class="hashtags">
@@ -705,21 +690,15 @@
             </div>
         </section>
     </div>
-
     <footer>
         <p>© 2025 Vodka Casino. Все права защищены.</p>
         <p>Поддержка: <a href="mailto:support@vodka-casino.ru" style="color: var(--accent-color);">support@vodka-casino.ru</a></p>
     </footer>
-
-    <!-- Подключение скриптов -->
     <script src="public/cache/1slots.js"></script>
     <script>
-        // Карусель функциональность
         let currentSlide = 0;
         const slides = document.querySelectorAll('.carousel-item');
         const totalSlides = slides.length;
-
-        // Создаем индикаторы
         function createIndicators() {
             const indicatorsContainer = document.getElementById('indicators');
             for (let i = 0; i < totalSlides; i++) {
@@ -734,8 +713,6 @@
         function updateCarousel() {
             const carousel = document.getElementById('carousel');
             carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
-            
-            // Обновляем индикаторы
             document.querySelectorAll('.indicator').forEach((indicator, index) => {
                 indicator.classList.toggle('active', index === currentSlide);
             });
@@ -755,11 +732,7 @@
             currentSlide = slideIndex;
             updateCarousel();
         }
-
-        // Автоматическая смена слайдов
         setInterval(nextSlide, 5000);
-
-        // Анимация при скролле
         window.addEventListener('scroll', () => {
             const sections = document.querySelectorAll('.section');
             sections.forEach(section => {
@@ -770,14 +743,10 @@
                 }
             });
         });
-
-        // Инициализация
         document.addEventListener('DOMContentLoaded', () => {
             createIndicators();
             updateCarousel();
         });
-
-        // Lite YouTube embed: загружаем iframe только по клику
         (function initLiteYouTube(){
           const el = document.querySelector('.yt-lite');
           if (!el) return;
@@ -797,8 +766,6 @@
             el.replaceWith(iframe);
           }, { once:true });
         })();
-
-        // Service Worker регистрация (корневой scope)
         if ('serviceWorker' in navigator) {
             window.addEventListener('load', function() {
                 navigator.serviceWorker.register('/sw.js', { scope: '/' })
@@ -813,3 +780,4 @@
     </script>
 </body>
 </html>
+
