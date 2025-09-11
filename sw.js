@@ -4,6 +4,7 @@ const urlsToCache = [
   '/index.html',
   '/deposit.html',
   '/vivod.html',
+  '/YouTube.html',
   '/public/cache/script.js',
   '/public/cache/manifest.json',
   '/public/cache/manifest.webmanifest',
@@ -93,3 +94,4 @@ self.addEventListener('fetch', event => {
     return net;
   })());
 });
+
