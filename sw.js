@@ -78,13 +78,11 @@ const urlsToCache = [
   '/public/cache/subtitles_vodka_casino_metod/uk.vtt',
   '/public/cache/subtitles_vodka_casino_metod/zh-CN.vtt'
 ];
-
 self.addEventListener('install', event => {
   event.waitUntil(
     caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache))
   );
 });
-
 self.addEventListener('activate', event => {
   event.waitUntil(
     caches.keys().then(cacheNames => {
@@ -95,17 +93,13 @@ self.addEventListener('activate', event => {
     })
   );
 });
-
 self.addEventListener('fetch', event => {
   event.respondWith((async () => {
     const request = event.request;
     const cachedResponse = await caches.match(request);
     if (cachedResponse) return cachedResponse;
-
     try {
       const networkResponse = await fetch(request);
-
-      // ✅ кэшируем только успешные полные ответы (200 OK)
       const url = new URL(request.url);
       if (
         url.origin === self.location.origin &&
@@ -115,7 +109,6 @@ self.addEventListener('fetch', event => {
         const cache = await caches.open(CACHE_NAME);
         cache.put(request, networkResponse.clone());
       }
-
       return networkResponse;
     } catch (error) {
       if (request.mode === 'navigate') {
