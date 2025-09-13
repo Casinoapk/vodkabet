@@ -1,14 +1,15 @@
-const CACHE_NAME = 'vodka-site-cache-v5';
+const CACHE_NAME = 'vodka-site-cache-v6';
 const urlsToCache = [
+  '/public/cache/style.css',
   '/',
   '/index.html',
   '/deposit.html',
   '/vivod.html',
   '/YouTube.html',
-'/public/cache/poker.jpg',
-'/public/cache/roulette.jpg',
-'/public/cache/slots.jpg',
-'/public/cache/blackjack.jpg',
+  '/public/cache/poker.jpg',
+  '/public/cache/roulette.jpg',
+  '/public/cache/slots.jpg',
+  '/public/cache/blackjack.jpg',
   '/public/cache/script.js',
   '/public/cache/manifest.json',
   '/public/cache/manifest.webmanifest',
@@ -80,8 +81,7 @@ const urlsToCache = [
 
 self.addEventListener('install', event => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(cache => cache.addAll(urlsToCache))
+    caches.open(CACHE_NAME).then(cache => cache.addAll(urlsToCache))
   );
 });
 
@@ -104,11 +104,18 @@ self.addEventListener('fetch', event => {
 
     try {
       const networkResponse = await fetch(request);
+
+      // ✅ кэшируем только успешные полные ответы (200 OK)
       const url = new URL(request.url);
-      if (url.origin === self.location.origin && request.method === 'GET') {
+      if (
+        url.origin === self.location.origin &&
+        request.method === 'GET' &&
+        networkResponse.status === 200
+      ) {
         const cache = await caches.open(CACHE_NAME);
         cache.put(request, networkResponse.clone());
       }
+
       return networkResponse;
     } catch (error) {
       if (request.mode === 'navigate') {
@@ -118,4 +125,3 @@ self.addEventListener('fetch', event => {
     }
   })());
 });
-
