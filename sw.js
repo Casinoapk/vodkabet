@@ -1,27 +1,19 @@
 const CACHE_NAME = 'vodka-site-cache-v5';
 const urlsToCache = [
-  // Pages
   '/',
   '/index.html',
   '/deposit.html',
   '/vivod.html',
   '/YouTube.html',
- 
 '/public/cache/poker.jpg',
 '/public/cache/roulette.jpg',
 '/public/cache/slots.jpg',
 '/public/cache/blackjack.jpg',
-
-  // Scripts
   '/public/cache/script.js',
-
-  // PWA/Manifest/Logos
   '/public/cache/manifest.json',
   '/public/cache/manifest.webmanifest',
   '/public/cache/logo192.png',
   '/public/cache/logo512.png',
-
-  // Icons (cache version)
   '/public/cache/icons/favicon.ico',
   '/public/cache/icons/favicon.svg',
   '/public/cache/icons/favicon-16x16.png',
@@ -35,13 +27,7 @@ const urlsToCache = [
   '/public/cache/icons/web-app-manifest-512x512.png',
   '/public/cache/icons/apple-touch-icon-180x180.png',
   '/public/cache/icons/site.webmanifest',
-
-  // Shared media
   '/public/cache/images/back.svg',
-  '/public/cache/images/vodka-casino-vitus.webp',
-  '/public/cache/images/vodka_casino_vibor_valuti.webm',
-
-  // Deposit images (cache version)
   '/public/cache/images/deposit/panel_dlia_deposita_v_vodka_casino.avif',
   '/public/cache/images/deposit/panel_dlia_deposita_v_vodka_casino.min.avif',
   '/public/cache/images/deposit/panel_dlia_deposita_v_vodka_casino.mobile.avif',
@@ -50,8 +36,6 @@ const urlsToCache = [
   '/public/cache/images/deposit/vodka_casino_najmi_na_plus_i_popadeesh_na_stranicu_popolnenia_scheeta.min.avif',
   '/public/cache/images/deposit/vodka_casino_zagruzi_itot_chek_dlia_podtverjdenia_depozita.avif',
   '/public/cache/images/deposit/vodka_casino_zagruzi_itot_chek_dlia_podtverjdenia_depozita.min.avif',
-
-  // Vivod images (cache version)
   '/public/cache/images/vivod/nalichnii_vivod_casino_vodka.avif',
   '/public/cache/images/vivod/nalichnii_vivod_casino_vodka.min.avif',
   '/public/cache/images/vivod/samii_bistrii_vivod_vodka_casino.avif',
@@ -66,11 +50,8 @@ const urlsToCache = [
   '/public/cache/images/vivod/vivodi_na_t-bank_vodka_casino.min.avif',
   '/public/cache/images/vivod/vivodi_na_t-bank_vodka_casino.mobile.avif',
   '/public/cache/images/vivod/vodka_casino_spb_vivod_po_nomeru_telefon.avif',
-  '/public/cache/images/vivod/vodka_casino_spb_vivod_po_nomeru_telefona.webm',
   '/public/cache/images/vivod/vodka_casino_vivod_na_sberbank.avif',
   '/public/cache/images/vivod/vodka_casino_vivod_na_sberbank.min.avif',
-
-  // Subtitles (deposit video)
   '/public/cache/subtitles_vodka_casino/ar.vtt',
   '/public/cache/subtitles_vodka_casino/de.vtt',
   '/public/cache/subtitles_vodka_casino/en.vtt',
@@ -83,8 +64,6 @@ const urlsToCache = [
   '/public/cache/subtitles_vodka_casino/tr.vtt',
   '/public/cache/subtitles_vodka_casino/uk.vtt',
   '/public/cache/subtitles_vodka_casino/zh-CN.vtt',
-
-  // Subtitles (methods video on vivod)
   '/public/cache/subtitles_vodka_casino_metod/ar.vtt',
   '/public/cache/subtitles_vodka_casino_metod/de.vtt',
   '/public/cache/subtitles_vodka_casino_metod/en.vtt',
@@ -139,3 +118,4 @@ self.addEventListener('fetch', event => {
     }
   })());
 });
+
