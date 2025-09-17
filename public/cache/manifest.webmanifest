@@ -1,8 +1,7 @@
 {
   "name": "Vodka Casino",
   "short_name": "Vodka",
-  "description": "Инструкции по депозиту и выводу средств в Vodka Casino: наглядно и пошагово.",
-  "id": "/index.html",
+  "description": "Vodka Casino — онлайн-платформа для азартных игр.",
   "start_url": "/index.html",
   "scope": "/",
   "display": "standalone",
@@ -11,7 +10,7 @@
   "orientation": "portrait-primary",
   "lang": "ru-RU",
   "dir": "ltr",
-  "categories": ["entertainment", "games", "education"],
+  "categories": ["entertainment", "games"],
   "icons": [
     { "src": "icons/android-chrome-192x192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
     { "src": "icons/android-chrome-512x512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
